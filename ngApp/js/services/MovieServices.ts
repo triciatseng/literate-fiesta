@@ -20,8 +20,11 @@ namespace app.Services{
       return this.MovieResource.save(movie).$promise;
     }
 
+    public delete(movieId:number){
+      return this.MovieResource.delete({id: movieId}).$promise;
+    }
     constructor(private $resource: ng.resource.IResourceService){
-      this.MovieResource = $resource('/api/movies')
+      this.MovieResource = $resource('/api/movies/:id')
     }
 
   }
