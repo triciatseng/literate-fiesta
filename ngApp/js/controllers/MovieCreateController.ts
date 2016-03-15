@@ -4,13 +4,13 @@ namespace app.Controllers{
 
     public createMovie(){
         this.MovieService.create(this.movie).then((res)=>{
-
+          this.$state.go('Home');
         }, (err)=>{
 
         })
     }
 
-    constructor(private MovieService: app.Services.MovieService){
+    constructor(private MovieService: app.Services.MovieService, private $state: ng.ui.IStateService){
 
     }
   }
