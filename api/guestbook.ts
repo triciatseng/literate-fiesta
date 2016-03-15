@@ -9,7 +9,7 @@ let entries = [
 ];
 
 // unique entry id
-let entryId = entries.length; //
+let entryId = entries.length; //t
 
 /* GET movies */
 router.get('/guestbook', function(req, res, next) {
