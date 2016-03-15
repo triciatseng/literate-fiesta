@@ -6,7 +6,7 @@ namespace app.Controllers{
         this.MovieService.create(this.movie).then((res)=>{
           this.$state.go('Home');
         }, (err)=>{
-
+          alert(err);
         })
     }
 
