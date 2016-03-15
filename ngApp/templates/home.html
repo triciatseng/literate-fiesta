@@ -6,12 +6,13 @@
           {{m.id}}
         </div>
         <div class="col col-sm-2">
-          {{m.title}}
+          <a ui-sref="Movie Details({id: m.id})">{{m.title}}</a>
         </div>
         <div class="col col-sm-1">
           {{m.director}}
         </div>
         <div class="col col-sm-8">
+          <a class="btn btn-warning" ng-href="/movie/{{m.id}}">Details</a>
           <button type="button" class="btn btn-danger" ng-click="vm.deleteMovie(m)">Delete</button>
         </div>
       </div>

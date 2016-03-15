@@ -23,6 +23,11 @@ namespace app.Services{
     public delete(movieId:number){
       return this.MovieResource.delete({id: movieId}).$promise;
     }
+
+    public getMovie(id:number){
+      return this.MovieResource.get({id: id});
+    }
+
     constructor(private $resource: ng.resource.IResourceService){
       this.MovieResource = $resource('/api/movies/:id')
     }

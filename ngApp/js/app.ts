@@ -16,6 +16,11 @@ namespace App {
         templateUrl:'/templates/movieCreate.html',
         controller: 'MovieCreateController',
         controllerAs: 'vm'
+      }).state('Movie Details', {
+        url:'/movie/:id',
+        templateUrl:'/templates/movieDetails.html',
+        controller:'MovieDetailsController',
+        controllerAs:'vm'
       });
 
       $urlRouterProvider.otherwise('/');
