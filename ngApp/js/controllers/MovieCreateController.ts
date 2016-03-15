@@ -4,7 +4,7 @@ namespace app.Controllers{
 
     public createMovie(){
         this.MovieService.create(this.movie).then((res)=>{
-          
+
         }, (err)=>{
 
         })
